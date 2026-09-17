@@ -1,13 +1,7 @@
 # 🏋️‍♂️ DevGym — Seu Ginásio de Programação Gratuito
 
 O **DevGym** é uma plataforma comunitária e 100% gratuita desenvolvida para pessoas que querem aprender e praticar HTML profissional por meio de desafios de código em tempo real. O projeto conta com um sistema de etapas automatizado e um tutor de Inteligência Artificial integrado para guiar o aprendizado.
-
-🚀 **[Clique aqui para acessar o DevGym e começar a treinar!](./index.html)
-)** 
-*(Substitua o link acima pelo link que o GitHub Pages gerou para você)*
-
 ---
-
 ## ✨ Funcionalidades Principais
 
 *   **🔒 Tela de Login Moderna:** Interface elegante com efeitos de transição nos botões e validação visual de campos.
