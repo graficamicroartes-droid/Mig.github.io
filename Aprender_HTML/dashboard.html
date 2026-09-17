@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevGym - Plataforma de Código Aberta</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Fira+Code:wght@400;500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-body">
+
+    <!-- BARRA LATERAL DE NAVEGAÇÃO -->
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>Dev<span>Gym</span></h2>
+        </div>
+        <nav class="menu">
+            <a href="#" class="menu-item active" onclick="switchTab('modulo1')">📦 Desafio 1: Iniciar Tag</a>
+            <a href="#" class="menu-item" onclick="switchTab('modulo2')">📝 Desafio 2: Âncoras SEO</a>
+            <a href="#" class="menu-item" onclick="switchTab('modulo3')">🖼️ Desafio 3: Imagem Acessível</a>
+            <a href="#" class="menu-item" onclick="switchTab('modulo4')">📋 Desafio 4: Conectar Input</a>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="index.html" class="btn-logout">Sair do Treino</a>
+        </div>
+    </aside>
+
+    <!-- ÁREA CENTRAL DE CONTEÚDO -->
+    <main class="main-content">
+        <header class="main-header">
+            <div class="welcome-text">
+                <h1>Painel de Treinamento 🏋️‍♂️</h1>
+                <p>Pratique HTML com desafios interativos e gratuitos.</p>
+            </div>
+            <div class="progress-container">
+                <span class="progress-text">Progresso do Treino: <strong id="progress-percentage">0%</strong></span>
+                <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+            </div>
+        </header>
+
+        <section class="workspace">
+            <!-- Esquerda: Explicação do Desafio e Etapas -->
+            <div class="lesson-box">
+                <span class="badge">Desafio Prático</span>
+                <h2 id="lesson-title">Desafio 1: A Estrutura Semântica Inicial</h2>
+                <div id="lesson-text" class="lesson-text">
+                    <!-- Conteúdo alimentado pelo JS -->
+                </div>
+
+                <!-- NOVA SEÇÃO: LISTA DE ETAPAS DA LIÇÃO -->
+                <div class="steps-box">
+                    <h3>🎯 Etapas para Conclusão</h3>
+                    <ul id="steps-list">
+                        <!-- Gerado dinamicamente via JavaScript -->
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Centro: Editor de Código -->
+            <div class="editor-box">
+                <div class="editor-header">
+                    <span>💻 main.html</span>
+                </div>
+                <!-- O input agora dispara o validador de etapas enquanto o usuário digita -->
+                <textarea id="code-input" spellcheck="false" placeholder="Escreva seu código HTML aqui para validação..." oninput="checkLiveSteps()"></textarea>
+                <div class="editor-actions">
+                    <button class="btn-clear" onclick="clearEditor()">Limpar</button>
+                    <button class="btn-verify" onclick="verifyCode()">Submeter Código 🚀</button>
+                </div>
+                <div id="feedback" class="feedback-msg"></div>
+            </div>
+
+            <!-- Direita: Chat com o Tutor de IA (DevAI) -->
+            <div class="ai-box">
+                <div class="ai-header">
+                    <div class="ai-status-dot"></div>
+                    <span>🤖 DevAI - Seu Tutor Integrado</span>
+                </div>
+                <div class="ai-messages" id="ai-messages">
+                    <div class="message ai">Olá! Sou o DevAI. Digite seu código ao lado. Se precisar de uma dica ou não entender o erro, fale comigo abaixo!</div>
+                </div>
+                <div class="ai-input-area">
+                    <input type="text" id="ai-user-query" placeholder="Pergunte algo à IA..." onkeypress="handleAIPress(event)">
+                    <button onclick="askAI()">Enviar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL DE CERTIFICADO FINAL -->
+    <div class="overlay" id="overlay"></div>
+    <div class="modal-cert" id="modal-cert">
+        <h2>🎉 PARABÉNS, DEVTREINO CONCLUÍDO!</h2>
+        <p style="margin: 20px 0; color: #4b5563;">Você completou com excelência todos os módulos de HTML Profissional no <strong>DevGym</strong>.</p>
+        <div style="border: 2px dashed #4f46e5; padding: 20px; border-radius: 8px; font-family: monospace; background: #fafafa; color: #1f2937;">
+            🏆 CERTIFICADO DE CONCLUSÃO EM HTML <br>
+            <span style="font-size: 13px; color: #6b7280;">Autenticação: DG-2026-COMPLETO</span>
+        </div>
+        <button class="btn-verify" style="margin-top: 25px; width: 100%;" onclick="closeModal()">Voltar ao Ginásio</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

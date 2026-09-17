@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login Moderna</title>
+    <!-- Importando a fonte Poppins do Google Fonts para um visual limpo -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Link para o arquivo de estilização -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Bem-vindo de volta</h2>
+        <p class="subtitle">Insira suas credenciais para acessar o sistema</p>
+
+        <form>
+            <div class="input-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="seu@email.com" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" placeholder="••••••••" required>
+            </div>
+
+            <div class="utilities">
+                <label class="checkbox-container">
+                    <input type="checkbox"> Lembrar de mim
+                </label>
+                <a href="#" class="forgot-password">Esqueceu a senha?</a>
+            </div>
+
+            <button type="submit" class="btn-login">Entrar</button>
+        </form>
+
+        <p class="footer-text">Não tem uma conta? <a href="#">Cadastre-se</a></p>
+    </div>
+
+</body>
+<!-- ... Resto do seu código HTML anterior ... -->
+
+    </div>
+
+    <!-- Script para simular o login e redirecionar -->
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede a página de recarregar
+            
+            // Aqui você validaria o e-mail e senha no mundo real.
+            // Redireciona para o arquivo da sua nova página:
+            window.location.href = "dashboard.html"; 
+        });
+    </script>
+</body>
+</html>
+
+</html>
